@@ -94,3 +94,7 @@ callback 함수, 반응이 일어났을 때에만 호출되라는 의미에서 r
    date.getHours(); 
    ```
    ```setInterval(fn, time(ms))``` 이용하기!
+  - 삼항연산자!!!
+### 3.2 Saving the User Name
+  - localStorage..
+  - localStorage.setItem("hoho",true);
