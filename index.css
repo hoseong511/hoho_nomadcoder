@@ -1,3 +1,22 @@
 body{
   background: yellowgreen;
 }
+
+.btn{
+  cursor: pointer;
+}
+
+h1 {
+  color: #52687e;
+  transition: color 0.5s ease-in-out;
+}
+h1:hover {
+  color: #021d2b;
+  transition: color 0.5s ease-in-out;
+}
+
+/* css영역과 js를 분리하여 관리 */
+.clicked {
+  color: #7c143c;
+}
+

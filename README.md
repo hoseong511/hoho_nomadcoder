@@ -78,3 +78,19 @@ console.log(info.favMovie[0].genere)
 ```
 callback 함수, 반응이 일어났을 때에만 호출되라는 의미에서 resizeListener()가 아닌 resizeListener로 작성했다.
 ```
+
+## 2. PRACTICE
+### 2.1 function
+### 2.2 JS DOM function
+### 2.3 Modifying the DOM with JS
+### 2.4 Events and event handlers
+### 2.5 DOM - if else - function
+
+## 3. JS APP
+### 3.1 JS Clock
+  ```JavaScript
+   const date = new Date(); //Date를 객체로 만들어서 사용
+   date.getDate();
+   date.getHours(); 
+   ```
+   ```setInterval(fn, time(ms))``` 이용하기!

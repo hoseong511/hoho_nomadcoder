@@ -1,11 +1,10 @@
-const test = document.getElementById("title");
-test.innerHTML = " Hi! from JS";
-test.style.color = "white";
-document.title = "Wtf"
-console.dir(test)
+const title = document.querySelector("#title");
 
-function handleResize(event){
-  console.log(event);
+const CLICKED_CLASS = "clicked";
+const MOUSEOVER_CLASS = "mouseover";
+
+function handleClick(){
+  title.classList.toggle(CLICKED_CLASS);
 }
 
 function handleclick(event){
@@ -21,4 +20,4 @@ function handleclick(event){
   }
 }
 
-window.addEventListener("click", handleclick);
+title.addEventListener("click", handleClick);
