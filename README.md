@@ -98,3 +98,9 @@ callback 함수, 반응이 일어났을 때에만 호출되라는 의미에서 r
 ### 3.2 Saving the User Name
   - localStorage..
   - localStorage.setItem("hoho",true);
+
+### 3.3 Making a To Do List
+
+### 3.4 Image Background
+
+### 3.5 Getting the Weather
