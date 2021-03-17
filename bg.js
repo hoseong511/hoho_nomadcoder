@@ -17,9 +17,10 @@ function loadBackground() {
       body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(${
         parsedImage.url
       })`;
+      console.log(parsedImage.city);  
       if (parsedImage.name !== null 
           && parsedImage.city !== null
-          &&parsedImage.country !== null) {
+          && parsedImage.country !== null) {
             locationContainer.innerHTML = `${parsedImage.name}, ${
               parsedImage.city
             }, ${parsedImage.country}`;
