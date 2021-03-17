@@ -1,16 +1,24 @@
 const UNSPLASH_APIKEY="PDToVYZCm6MnMatLfE0hlnuz2mMAD2wsz5Arx9Z5mIk",
-  UNSPLASH = `https://api.unsplash.com/photos/random/?client_id=${UNSPLASH_APIKEY}&query=spring&orientation=landscape&auto=format`;
+  UNSPLASH = `https://api.unsplash.com/photos/random/?client_id=${UNSPLASH_APIKEY}&orientation=landscape&auto=format`;
 
 const body = document.querySelector("body"),
   locationContainer = document.querySelector(".js-location span");
 
+
+
 function loadBackground() {
   const savedImage = localStorage.getItem("bg");
+  const today = new Date();
+  const month = today.getMonth()+1;
+  const selectSeason = 3<=month && month <=5 ? "spring" 
+                    : 6<=month && month <= 8 ? "summer"
+                    : 9<=month && month <= 11 ? "fall" : "winter";
+  
   if (savedImage === null) {
-    getBackground();
+    getBackground(selectSeason);
   } else {
-    const parsedImage = JSON.parse(savedImage);
-    const today = new Date();
+    const parsedImage = JSON.parse(savedImage);    
+    
     if (today > parsedImage.expiresOn) {
       getBackground();
     } else {
@@ -53,8 +61,8 @@ function saveBackground(imageUrl, city, country, name) {
   
 }
 
-function getBackground(){
-  fetch(UNSPLASH)
+function getBackground(selectSeason){
+  fetch(UNSPLASH+`query=${selectSeason}`)
     .then(response => response.json())          
     .then(json => {
       const image = json;      
@@ -69,7 +77,7 @@ function getBackground(){
         const name = location.name;
         saveBackground(fullUrl, city, country, name);
       } else {
-        getBackground();
+        getBackground(selectSeason);
       }
     });  
     
