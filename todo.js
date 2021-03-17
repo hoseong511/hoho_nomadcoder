@@ -30,13 +30,14 @@ function saveToDos(){
 function paintToDo(text){   
   const id = Math.random() * 10;
   const li = document.createElement("li");
-  const delBtn = document.createElement("button");  
-  const span = document.createElement("span"); 
+  const delBtn = document.createElement("span");  
+  const span = document.createElement("label"); 
+  delBtn.className = "del__btn"
   delBtn.innerText= "❌";
   delBtn.addEventListener("click",deleteToDo);
   span.innerText = text;
-  li.appendChild(delBtn);
   li.appendChild(span);
+  li.appendChild(delBtn);
   li.id = id;
   toDoList.appendChild(li);
   
