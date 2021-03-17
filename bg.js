@@ -1,5 +1,5 @@
 const UNSPLASH_APIKEY="PDToVYZCm6MnMatLfE0hlnuz2mMAD2wsz5Arx9Z5mIk",
-  UNSPLASH = `https://api.unsplash.com/photos/random/?client_id=${UNSPLASH_APIKEY}&query=landscape&orientation=landscape&auto=format`;
+  UNSPLASH = `https://api.unsplash.com/photos/random/?client_id=${UNSPLASH_APIKEY}&query=spring&orientation=landscape&auto=format`;
 
 const body = document.querySelector("body"),
   locationContainer = document.querySelector(".js-location span");
@@ -25,7 +25,7 @@ function loadBackground() {
               parsedImage.city
             }, ${parsedImage.country}`;
       } else {
-        locationContainer.innerHTML = "unsplash";
+        locationContainer.innerHTML = "unsplash.com";
       }
       
     }
