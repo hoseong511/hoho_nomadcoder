@@ -104,3 +104,12 @@ callback 함수, 반응이 일어났을 때에만 호출되라는 의미에서 r
 ### 3.4 Image Background
 
 ### 3.5 Getting the Weather
+### CSS
+- 화면크기가 작아질 때 요소크기를 직접 줄여줌.
+  ```CSS
+  @media (max-width: 600px){
+    .clock{
+      font-size: 6em;
+    }
+  }
+  ```
