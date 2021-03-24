@@ -17,15 +17,20 @@ function loadBackground() {
   if (savedImage === null) {
     getBackground(selectSeason);
   } else {
-    const parsedImage = JSON.parse(savedImage);    
-    
-    if (today > parsedImage.expiresOn) {
-      getBackground();
-    } else {
-      body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(${
-        parsedImage.url
-      })`;
-      console.log(parsedImage.city);  
+      const parsedImage = JSON.parse(savedImage);    
+      today.setDate(today.getDate())
+      
+      console.log(typeof(parsedImage.expiresOn))      
+      localStorage.setItem("today",JSON.stringify(today))
+      const getToday = localStorage.getItem("today")
+      
+      if (JSON.parse(getToday) > parsedImage.expiresOn) {
+        getBackground();
+      } else {
+        body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(${
+          parsedImage.url
+        })`;
+        console.log(parsedImage.city);  
       if (parsedImage.name !== null 
           && parsedImage.city !== null
           && parsedImage.country !== null) {
