@@ -1,6 +1,37 @@
-#  바닐라 js로 momentom앱 만들기
+노마드 코더( [Vanila JS momentum](https://nomadcoders.co/javascript-for-beginners/lobby) )보며 배운 vanilaJS
 
-## 1. THEORY
+## **demo**
+- [hoho_nomadcorder](https://hoseong511.github.io/hoho_nomadcoder/)
+
+## **env**
+  - hosting: github Pages
+
+## **contents**
+  - 라이브러리를 이용하지 않은 JS(vanilaJS)로 구현한 기능들
+  - 시계와 사용자 별 할일 작성 
+  - 배경 API ( https://api.unsplash.com/photos/random/?client_id=${APIKEY} )
+  - 날씨 API ( https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric )
+
+## **directory & features**
+  ```sh
+  │  .gitignore
+  │  index.css
+  │  index.html
+  │  README.md
+  │
+  └─js
+        bg.js
+        clock.js
+        greeting.js
+        todo.js
+        weather.js
+  ```
+  - greeting.js, todo.js, bg.js -> local storage를 이용
+  - bg.js: API fetch, 날짜별 다른 사진요청(사계절 키워드) 및 24시간 후 바뀌는 사진 ( [source code](https://github.com/hoseong511/hoho_nomadcoder/commit/62f3425bfe957522c10156678b5061015de2f05c#diff-3721fac8d545032c8ce27deff59487f74b95bad2b27ec7b06aebca534cf7a8a8) )
+
+
+## **learned**
+### 1. THEORY
 ### 1.1 super Power of JS
   - realtime 채팅(socket.io)
   - js로 할 수 있는것들?
@@ -79,14 +110,14 @@ console.log(info.favMovie[0].genere)
 callback 함수, 반응이 일어났을 때에만 호출되라는 의미에서 resizeListener()가 아닌 resizeListener로 작성했다.
 ```
 
-## 2. PRACTICE
+### 2. PRACTICE
 ### 2.1 function
 ### 2.2 JS DOM function
 ### 2.3 Modifying the DOM with JS
 ### 2.4 Events and event handlers
 ### 2.5 DOM - if else - function
 
-## 3. JS APP
+### 3. JS APP
 ### 3.1 JS Clock
   ```JavaScript
    const date = new Date(); //Date를 객체로 만들어서 사용
